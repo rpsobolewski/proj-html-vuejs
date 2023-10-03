@@ -2,11 +2,12 @@
 
 
 export default {
+    props: ['navItems'],
     name: 'AppHeaderNavbar',
     data() {
         return {
-            navItems: ['HOME', 'PAGES', 'PORTFOLIO', 'BLOG', 'GAMES', 'SHOP', 'ELEMENTS'],
-            activeIndex: null,
+
+
         };
     },
 
