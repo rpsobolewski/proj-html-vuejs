@@ -21,7 +21,6 @@ export default {
 </script>
 
 <template>
-  AppVue
   <AppHeader></AppHeader>
   <AppMain></AppMain>
   <AppFooter></AppFooter>
