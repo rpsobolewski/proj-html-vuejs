@@ -22,8 +22,8 @@ export default {
 <template>
     <AppHeaderNavbar v-bind:navItems="navItems"></AppHeaderNavbar>
 
-    <div class="slider d-flex">
-        <div class="col-1">
+    <div class="slider d-flex justify-content-end">
+        <div class="col-1"><!-- prev button -->
             <div class="button">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                     viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -34,8 +34,15 @@ export default {
             </div>
 
         </div>
-        <div class="col-5"></div>
-        <div class="col-5">
+        <div class="col-4">
+            <h1 class="title_1 d-inline">Devotion that never </h1>
+            <h1 class="title_2 d-inline ">ends</h1>
+            <p class="pt-3 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ducimus obcaecati cupiditate
+                ipsam ab voluptas
+                pariatur nemo dolore! Nesciunt, praesentium?</p>
+            <a class="readMore" href="#">READ MORE</a>
+        </div><!-- text -->
+        <div class="col-5"><!-- img -->
             <img class="position-relative" src="../assets/h-2-slider-img-15.png" alt="">
             <img src="../assets/h-2-slider-img-16.png" alt="">
             <img class="position-absolute foglia_1" src="../assets/h-2-slider-img-12.png" alt="">
@@ -50,7 +57,7 @@ export default {
 
 
         </div>
-        <div class="col-1 ">
+        <div class="col-1 "><!-- next button -->
 
             <div class="button">
 
@@ -122,5 +129,30 @@ svg {
 .foglia_3 {
     top: 10%;
     left: 80%;
+}
+
+.title_2,
+.title_1 {
+    font-size: 85px;
+
+}
+
+.title_2 {
+    font-family: 'Lobster', cursive;
+}
+
+P {
+    color: $m_textDarkGray ;
+}
+
+.readMore {
+    text-decoration: none;
+    color: $m_dark;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid $m_navUnderline;
+    padding: 7px 10px;
+
 }
 </style>
