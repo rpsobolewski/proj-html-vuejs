@@ -82,7 +82,7 @@ export default {
 
 svg {
     fill: white;
-
+    padding-bottom: 3px;
 
 }
 
