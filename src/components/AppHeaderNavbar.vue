@@ -4,12 +4,7 @@
 export default {
     props: ['navItems'],
     name: 'AppHeaderNavbar',
-    data() {
-        return {
 
-
-        };
-    },
 
 }
 </script>
