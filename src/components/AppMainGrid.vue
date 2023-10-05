@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="col-4"><img src="../assets/h-2-port-img-2.jpg" alt="">
-            <div class="hover ps-2">
+            <div class="hover ps-2 diff">
                 <h2>Illustration of novels</h2>
                 <p>Illustration</p>
             </div>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="col-4"><img src="../assets/h-2-port-img-6.jpg" alt="">
-            <div class="hover ps-2">
+            <div class="hover ps-2 diff">
                 <h2>Illustration of novels</h2>
                 <p>Illustration</p>
             </div>
@@ -71,6 +71,10 @@ img {
 
     transition: opacity 0.3s ease-in-out;
 
+}
+
+.diff {
+    background-color: rgb(249, 237, 223);
 }
 
 .col-4:hover .hover {

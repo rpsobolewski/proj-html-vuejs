@@ -34,6 +34,7 @@ export default {
             </div>
 
         </div>
+
         <div class="col-4">
             <h1 class="title_1 d-inline">Devotion that never </h1>
             <h1 class="title_2 d-inline ">ends</h1>
@@ -43,6 +44,7 @@ export default {
             <a class="readMore" href="#">READ MORE</a>
         </div><!-- text -->
         <div class="col-5"><!-- img -->
+
             <img class="position-relative" src="../assets/h-2-slider-img-15.png" alt="">
             <img src="../assets/h-2-slider-img-16.png" alt="">
             <img class="position-absolute foglia_1" src="../assets/h-2-slider-img-12.png" alt="">
