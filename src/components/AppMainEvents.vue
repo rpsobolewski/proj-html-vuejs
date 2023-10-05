@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex justify-content-center">
-        <div class="col-3"><!-- card 1 -->
+        <div class="col-3 mb-5 mt-5"><!-- card 1 -->
             <div class="banner"><!-- banner -->
 
                 <p class="date">07</p>
@@ -11,7 +11,7 @@
             <h2>This way, loves: a detailed guide through new design</h2>
             <p>By Emily Fields</p>
         </div>
-        <div class="col-3"><!-- card 2 -->
+        <div class="col-3 mb-5 mt-5"><!-- card 2 -->
             <div class="banner"><!-- banner -->
 
                 <p class="date">07</p>
@@ -22,7 +22,7 @@
             <h2>I try to give people a different way of looking at art</h2>
             <p>By Emily Fields</p>
         </div>
-        <div class="col-3"><!-- card 3 -->
+        <div class="col-3 mb-5 mt-5"><!-- card 3 -->
             <div class="banner"><!-- banner -->
 
                 <p class="date">07</p>
