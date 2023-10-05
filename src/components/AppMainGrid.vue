@@ -80,6 +80,7 @@ img {
 
 p {
     font-family: 'Lobster', cursive;
+    font-size: 20px;
 
 }
 </style>
