@@ -14,8 +14,19 @@ export default {
     },
     data() {
         return {
-            navItems: ['HOME', 'PAGES', 'PORTFOLIO', 'BLOG', 'GAMES', 'SHOP', 'ELEMENTS']
+            navItems: ['HOME', 'PAGES', 'PORTFOLIO', 'BLOG', 'GAMES', 'SHOP', 'ELEMENTS'],
+            currentSlide: 0,
         }
+    },
+    methods: {
+
+        prevSlide() {
+            this.currentSlide = (this.currentSlide - 1 + 3) % 3;
+        },
+
+        nextSlide() {
+            this.currentSlide = (this.currentSlide + 1) % 3;
+        },
     },
 }
 </script>
@@ -24,7 +35,7 @@ export default {
 
     <div class="slider d-flex justify-content-end">
         <div class="col-1"><!-- prev button -->
-            <div class="button">
+            <div class="button" @click="prevSlide">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                     viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
@@ -45,14 +56,29 @@ export default {
         </div><!-- text -->
         <div class="col-5"><!-- img -->
 
-            <img class="position-relative" src="../assets/h-2-slider-img-15.png" alt="">
-            <img src="../assets/h-2-slider-img-16.png" alt="">
-            <img class="position-absolute foglia_1" src="../assets/h-2-slider-img-12.png" alt="">
-            <img class="position-absolute foglia_2" src="../assets/h-2-slider-img-13.png" alt="">
-            <img class="position-absolute foglia_3" src="../assets/h-2-slider-img-14.png" alt="">
-            <img class="position-absolute foglia_4" src="../assets/h-2-slider-img-17.png" alt="">
-            <img class="position-absolute foglia_5" src="../assets/short-slider-rev-1-img-2.png" alt="">
-            <img class="position-absolute foglia_6" src="../assets/short-slider-rev-1-img-2.png" alt="">
+            <div class=" slide1" v-if="currentSlide === 0"><img class="position-relative"
+                    src="../assets/h-2-slider-img-15.png" alt="">
+                <img src="../assets/h-2-slider-img-16.png" alt="">
+
+                <img class="position-absolute foglia_1" src="../assets/h-2-slider-img-12.png" alt="">
+                <img class="position-absolute foglia_2" src="../assets/h-2-slider-img-13.png" alt="">
+                <img class="position-absolute foglia_3" src="../assets/h-2-slider-img-14.png" alt="">
+                <img class="position-absolute foglia_4" src="../assets/h-2-slider-img-17.png" alt="">
+                <img class="position-absolute foglia_5" src="../assets/short-slider-rev-1-img-2.png" alt="">
+                <img class="position-absolute foglia_6" src="../assets/short-slider-rev-1-img-2.png" alt="">
+
+            </div>
+            <div class="slide2 ma" v-else-if="currentSlide === 1">
+                <img src="../assets/h-2-slider-img-11.png" alt="">
+            </div>
+            <div class="slide3 ma" v-else>
+                <img src="../assets/short-slider-rev-1-img-3.png" alt="">
+            </div>
+
+
+
+
+
 
 
 
@@ -61,7 +87,7 @@ export default {
         </div>
         <div class="col-1 "><!-- next button -->
 
-            <div class="button">
+            <div class="button" @click="nextSlide">
 
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                     viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -73,10 +99,19 @@ export default {
 
         </div>
 
+
     </div>
 </template> 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
+
+img {
+    max-height: 430px;
+}
+
+.ma {
+    margin-left: 100px;
+}
 
 .slider {
     padding-top: 70px;
